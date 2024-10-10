@@ -6,11 +6,9 @@ int main(void) {
   int quant1, quant2, quant3, quant4;
 
   printf("Enter 4 prices and four quantities:\n");
-  scanf("%f%d%f%d%f%d%f%d", &price1, &quant1, &price2, &quant2, &price3,
-        &quant3, &price4, &quant4);
+  scanf("%f%d%f%d%f%d%f%d", &price1, &quant1, &price2, &quant2, &price3, &quant3, &price4, &quant4);
 
-  float total = (price1 * quant1) + (price2 * quant2) + (price3 * quant3) +
-                (price4 * quant4);
+  float total = (price1 * quant1) + (price2 * quant2) + (price3 * quant3) + (price4 * quant4);
 
   printf("Total is %.2f\n", total);
 
