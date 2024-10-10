@@ -1,23 +1,28 @@
 #include <stdio.h>
 
-int main(void){
+int main(void) {
 
-    
+    float change, paid, total;
 
-    printf("Enter 4 prices and four quantities:\n");
-    scanf("%f%f%f%f%f%f%f%f", &price1, &quant1, &price2, &quant2, &price3, &quant3, &price4, &quant4);
+    total = 0;
 
-    float total = (price1 * quant1) + (price2 * quant2) + (price3 * quant3) + (price4 * quant4);
+    printf("Enter 4 price and 4 quantities: \n");
 
-    printf("Total is %f", total);
+    for(int i = 0; i<4; i++){
+        float price;
+        int quantity;
 
-    float paid, change;
-    printf("Enter how much you are paying: ");
+        scanf("%f%d", &price, &quantity);
+
+        total += (price * quantity);
+    }
+
+    printf("Total is %.2f\nEnter how much you are paying: ", total);
     scanf("%f", &paid);
 
     change = paid - total;
 
-    printf("Change is %f", change);
-
+    printf("Change is %.2f", change);
+    
     return 0;
 }
