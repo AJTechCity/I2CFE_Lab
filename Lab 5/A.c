@@ -5,16 +5,16 @@ int main(){
 
     double t_obj, t_room, t_oven, q, time;
 
-    printf("Enter a value for Temperature of the room : ");
+    printf("Enter a value for Temperature of the room (degrees kelvin) : ");
     scanf("%lf", &t_room);
 
-    printf("Enter a value for Temperature of the oven : ");
+    printf("Enter a value for Temperature of the oven (degrees kelvin): ");
     scanf("%lf", &t_oven);
 
-    printf("Enter a value for the cooling constant for the object: ");
+    printf("Enter a value for the cooling constant for the object (degrees kelvin): ");
     scanf("%lf", &q);
 
-    printf("Enter a value for time elapsed since being removed from the oven : ");
+    printf("Enter a value for time elapsed since being removed from the oven (seconds): ");
     scanf("%lf", &time);
 
     if(time < 0 || q < 0 || t_room > t_oven){
