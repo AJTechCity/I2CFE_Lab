@@ -2,18 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-float litresToGallon(float litres){
-    return (litres / 4.54609);
-}
-
-float mpg(float distanceMiles, float fuelLitres){
-    float fuelGallons = litresToGallon(fuelLitres);
-    if(fuelGallons == 0 || distanceMiles == 0){
-        return 0;
-    }else{
-        return (distanceMiles / fuelGallons);
-    }
-}
+#define LITRESINGALLONS(litres) (litres / 4.54609)
+#define MPG(distanceMiles, fuelLitres) (distanceMiles / LITRESINGALLONS(fuelLitres))
 
 int main(){
 
@@ -111,25 +101,25 @@ int main(){
         vehicle_1_distance_town,
         vehicle_1_distance_openroad,
         vehicle_1_total_distance,
-        mpg(vehicle_1_distance_town, vehicle_1_fuel_town),
-        mpg(vehicle_1_distance_openroad, vehicle_1_fuel_openroad),
-        mpg(vehicle_1_total_distance, vehicle_1_total_fuel)
+        MPG(vehicle_1_distance_town, vehicle_1_fuel_town),
+        MPG(vehicle_1_distance_openroad, vehicle_1_fuel_openroad),
+        MPG(vehicle_1_total_distance, vehicle_1_total_fuel)
     );
     printf("Vehicle 1\t%.0f miles\t\t%.0f miles\t\t%.0f miles\t\t%.2f mpg\t\t%.2f mpg\t\t%.2f mpg\n",
         vehicle_2_distance_town,
         vehicle_2_distance_openroad,
         vehicle_2_total_distance,
-        mpg(vehicle_2_distance_town, vehicle_2_fuel_town),
-        mpg(vehicle_2_distance_openroad, vehicle_2_fuel_openroad),
-        mpg(vehicle_2_total_distance, vehicle_2_total_fuel)
+        MPG(vehicle_2_distance_town, vehicle_2_fuel_town),
+        MPG(vehicle_2_distance_openroad, vehicle_2_fuel_openroad),
+        MPG(vehicle_2_total_distance, vehicle_2_total_fuel)
     );
     printf("Vehicle 1\t%.0f miles\t\t%.0f miles\t\t%.0f miles\t\t%.2f mpg\t\t%.2f mpg\t\t%.2f mpg\n",
         vehicle_3_distance_town,
         vehicle_3_distance_openroad,
         vehicle_3_total_distance,
-        mpg(vehicle_3_distance_town, vehicle_3_fuel_town),
-        mpg(vehicle_3_distance_openroad, vehicle_3_fuel_openroad),
-        mpg(vehicle_3_total_distance, vehicle_3_total_fuel)
+        MPG(vehicle_3_distance_town, vehicle_3_fuel_town),
+        MPG(vehicle_3_distance_openroad, vehicle_3_fuel_openroad),
+        MPG(vehicle_3_total_distance, vehicle_3_total_fuel)
     );
 
     return 0;
