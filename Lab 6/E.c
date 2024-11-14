@@ -7,7 +7,7 @@ int main(){
     
     double A[5];
     double B[5];
-    double maximums[5];
+    double dotProduct=0;
 
     for(i=0;i<5;i++){
         printf("Enter a value for A[%d]: ", i);
@@ -19,18 +19,14 @@ int main(){
         printf("Enter a value for B[%d]: ", i);
         scanf("%lf", &B[i]);
 
-        if(B[i] > A[i]){
-            maximums[i] = B[i];
-        }else{
-            maximums[i] = A[i];
-        }
+        dotProductParts[i] = A[i] * B[i]; //Calculate during B's input to stop another for loop needing to be created
 
-        printf("Setting B[%d] = %f\n", i, B[i]);
+        printf("Setting B[%d] = %d\n", i, B[i]);
     }
 
-    for(i=0;i<5;i++){
-        printf("%.2f\n", maximums[i]);
-    }
+
+
+    printf("")
 
     return 0;
 }
