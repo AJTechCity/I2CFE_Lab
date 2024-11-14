@@ -19,14 +19,15 @@ int main(){
         printf("Enter a value for B[%d]: ", i);
         scanf("%lf", &B[i]);
 
-        dotProductParts[i] = A[i] * B[i]; //Calculate during B's input to stop another for loop needing to be created
+        dotProduct += A[i] * B[i]; //Gradually calc dot product during B's input to stop another for leep needing to be created
 
-        printf("Setting B[%d] = %d\n", i, B[i]);
+        printf("Setting B[%d] = %f\n", i, B[i]);
     }
 
 
 
-    printf("")
+
+    printf("Dot product is: %f", dotProduct);
 
     return 0;
 }
